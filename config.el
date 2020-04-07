@@ -1,9 +1,9 @@
 ;;; ~/.doom.d/config.el -*- lexical-binding: t; -*-
 
 ;; Place your private configuration here
-(setq user-full-name "Sunn Yao"
+(setq user-full-name "Weihua"
       frame-title-format (concat "%b - " user-full-name "'s Emacs")
-      user-mail-address "sunyour@gmail.com"
+      user-mail-address "whjiang@outlook.com"
       epa-file-encrypt-to user-mail-address)
 
 ;; System locale to use for formatting time values.
@@ -15,9 +15,9 @@
 ;; 设置我所在地方的经纬度，calendar里有个功能是日月食的预测，和经纬度相联系的。
 ;; 让emacs能计算日出日落的时间，在 calendar 上用 S 即可看到
 ;; 另外根据日出日落时间切换主题也需要经纬度
-(setq calendar-location-name "Beijing, China")
-(setq calendar-latitude +39.9055472)
-(setq calendar-longitude +116.3887056)
+(setq calendar-location-name "Shanghai, China")
+(setq calendar-latitude +31.22)
+(setq calendar-longitude +121.48)
 
 ;; init ccls include path
 (after! ccls

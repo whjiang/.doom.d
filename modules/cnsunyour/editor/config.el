@@ -33,3 +33,8 @@
       "M-p" 'symbol-overlay-switch-backward
       "<f7>" 'symbol-overlay-mode
       "<f8>" 'symbol-overlay-remove-all)
+
+;;evil setting
+(setq evil-want-fine-undo 'yes)
+(defalias 'forward-evil-word 'forward-evil-symbol)
+
