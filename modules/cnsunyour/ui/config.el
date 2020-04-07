@@ -8,8 +8,10 @@
                                       "Sarasa Mono Slab SC"
                                       "等距更纱黑体 SC"
                                       "等距更纱黑体 Slab SC"
-                                      "PragmataPro"
-                                      "Iosevka"
+                                      ;; "PragmataPro"
+                                      ;; "Iosevka"
+                                      ;; "Inconsolata"
+                                      "Unifont"
                                       "Noto Sans Mono CJK SC"
                                       "WenQuanYi Zen Hei Mono"
                                       "文泉驿等宽正黑"
@@ -151,21 +153,26 @@
                                       doom-nord-light
                                       doom-opera-light
                                       doom-solarized-light
-                                      doom-tomorrow-day)
+                                      doom-tomorrow-day
+                                      flucui-light
+                                      lab-light)
                                     '(doom-one
+                                      doom-vibrant
                                       doom-city-lights
                                       doom-challenger-deep
-                                      doom-dracula
                                       doom-dark+
+                                      doom-dracula
                                       doom-gruvbox
                                       doom-Iosvkem
-                                      doom-vibrant
                                       doom-molokai
                                       doom-moonlight
                                       doom-oceanic-next
                                       doom-peacock
+                                      doom-snazzy
                                       doom-spacegrey
-                                      doom-snazzy)))))
+                                      srcery
+                                      flucui-dark
+                                      lab-dark)))))
 
 (use-package! awesome-tab
   :commands (awesome-tab-mode)
@@ -199,5 +206,7 @@
   (("s-t" . hydra-tab/body)))
 
 (use-package! emojify
+  :custom
+  (emojify-point-entered-behaviour 'uncover)
   :hook
   ('telega-chat-mode . #'emojify-mode))

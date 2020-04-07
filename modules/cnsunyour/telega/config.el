@@ -19,6 +19,7 @@
   :init
   (unless (display-graphic-p) (setq telega-use-images nil))
   :hook
+  ('telega-chat-mode . #'doom-mark-buffer-as-real-h)
   ('telega-chat-mode . #'yas-minor-mode-on)
   ('telega-chat-mode . #'visual-line-mode)
   ('telega-chat-mode . (lambda ()
@@ -38,9 +39,9 @@
             "@vid" "@bing" "@wiki" "@imdb")
 
   (set-popup-rule! (regexp-quote telega-root-buffer-name)
-    :side 'right :size 100 :quit t :modeline t)
+    :side 'right :size 100 :select t :ttl nil :quit 'current :modeline t)
   (set-popup-rule! "^◀[^◀\[]*[\[({<].+[\])}>]"
-    :side 'right :size 100 :quit t :modeline t)
+    :side 'right :size 100 :select t :ttl nil :quit 'current :modeline t)
 
   (telega-mode-line-mode 1)
   (telega-url-shorten-mode 1)
