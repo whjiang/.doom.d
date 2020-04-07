@@ -38,9 +38,9 @@
 ;; `org' pre private config
 ;;
 ;; set org files directory
-(setq org-directory "~/Dropbox/org/")
+(setq org-directory "~/org/")
 ;; set org gtd files directory
-(defvar org-gtd-directory "~/Dropbox/gtd/"
+(defvar org-gtd-directory "~/org"
   "Default directory of org gtd files.")
 ;; set agenda files
 (setq org-agenda-files

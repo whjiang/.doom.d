@@ -190,7 +190,7 @@
 
        :cnsunyour
        bindings
-       beancount
+       ;;beancount
        blog
        calendar
        chinese

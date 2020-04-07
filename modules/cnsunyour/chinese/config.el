@@ -69,10 +69,10 @@ unwanted space when exporting org-mode to hugo markdown."
     ("C-S-`" . #'rime-send-keybinding))
   :custom
   (default-input-method "rime")
-  ;; (rime-librime-root (cond (IS-MAC (let ((dir (expand-file-name "~/repos/librime/dist")))
-  ;;                                    (when (file-directory-p dir)
-  ;;                                      dir)))
-  ;;                          (t rime-librime-root)))
+  (rime-librime-root (cond (IS-MAC (let ((dir (expand-file-name "~/.emacs.d/librime/dist")))
+                                      (when (file-directory-p dir)
+                                        dir)))
+                            (t rime-librime-root)))
   (rime-share-data-dir
    (cl-some (lambda (dir)
               (let ((abs-dir (expand-file-name dir)))
