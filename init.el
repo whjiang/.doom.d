@@ -206,4 +206,5 @@
        tools
        translate
        ui
+       programming
        )

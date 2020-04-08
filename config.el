@@ -19,15 +19,6 @@
 (setq calendar-latitude +31.22)
 (setq calendar-longitude +121.48)
 
-;; init ccls include path
-(after! ccls
-  (when IS-MAC
-    (setq ccls-initialization-options
-          `(:clang ,(list :extraArgs ["-isystem/Library/Developer/CommandLineTools/usr/include/c++/v1"
-                                      "-isystem/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include"
-                                      "-isystem/usr/local/include"]
-                          :resourceDir (string-trim (shell-command-to-string "clang -print-resource-dir")))))))
-
 ;; define environmental variable for some works
 (setenv "PKG_CONFIG_PATH"
         (concat

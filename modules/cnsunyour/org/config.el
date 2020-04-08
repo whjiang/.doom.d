@@ -130,9 +130,20 @@
     (interactive "P")
     (org-agenda-todo "DONE")
     (org-clock-out-if-current))
+
+  ;; (defun my/org-subtree-to-indirect-buffer ()
+  ;;   (interactive)
+  ;;   (let ((ind-buf (concat (buffer-name) "-narrowclone")))
+  ;;     (if (get-buffer ind-buf)
+  ;;         (kill-buffer ind-buf))
+  ;;     (clone-indirect-buffer-other-window ind-buf t)
+  ;;     (org-narrow-to-subtree)
+  ;;     (switch-to-buffer ind-buf)))
+
   (defun my/org-agenda-mode-fn ()
     ;;(evil-set-initial-state 'org-agenda-mode 'emacs)
     (define-key org-agenda-mode-map "x" 'my/org-agenda-done)
+    ;; (define-key org-agenda-mode-map "h" 'my/org-subtree-to-indirect-buffer)
     (hl-line-mode 1))
 
   ;;  (set-face-attribute 'hl-line nil :foreground nil :background "RoyalBlue4")
