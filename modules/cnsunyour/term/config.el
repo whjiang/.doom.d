@@ -7,3 +7,7 @@
 (after! eshell
   (when (featurep! :editor evil)
     (evil-set-initial-state 'eshell-mode 'emacs)))
+
+(after! clipetty
+  (global-clipetty-mode)
+)
